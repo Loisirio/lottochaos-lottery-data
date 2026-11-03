@@ -3,6 +3,7 @@
 Clean, ready-to-use CSV files with the winning numbers of **36 lotteries** from Europe, North America, Asia and Africa, from the first available draw to today (174,964 rows in total). Maintained by **[Lottochaos](https://lottochaos.com/en/)**, an independent lottery statistics project: pure statistics, no predictions.
 
 - Source page, always up to date: https://lottochaos.com/en/open-data/
+- Also on Kaggle: https://www.kaggle.com/datasets/infoloisirio/lottery-draws-36-games-full-history
 - Licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) – free to use, share and adapt, with attribution "Data: lottochaos.com".
 
 ## Files
