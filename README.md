@@ -1,8 +1,8 @@
 # Lottery draw results: 36 games, full history
 
-Clean, ready-to-use CSV files with the winning numbers of **36 lotteries** from Europe, North America, Asia and Africa, from the first available draw to today (174,964 rows in total). Maintained by **[Lottochaos](https://lottochaos.com/en/)**, an independent lottery statistics project: pure statistics, no predictions.
+Clean, ready-to-use CSV files with the winning numbers of **36 lotteries** from Europe, North America, Asia and Africa, from the first available draw to today (194,105 rows in total). Maintained by **[Lottochaos](https://lottochaos.com/en/?utm_source=github)**, an independent lottery statistics project: pure statistics, no predictions.
 
-- Source page, always up to date: https://lottochaos.com/en/open-data/
+- Source page, always up to date: https://lottochaos.com/en/open-data/?utm_source=github
 - Also on Kaggle: https://www.kaggle.com/datasets/infoloisirio/lottery-draws-36-games-full-history
 - Licence: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) – free to use, share and adapt, with attribution "Data: lottochaos.com".
 
@@ -18,7 +18,7 @@ Clean, ready-to-use CSV files with the winning numbers of **36 lotteries** from 
 | EuroDreams | Europe | `data/ed.csv` | 307 | 2023-11-06 | 2026-10-12 | 6 of 40 | b1 = Dream number |
 | EuroMillions | Europe | `data/em.csv` | 1,989 | 2004-02-13 | 2026-10-13 | 5 of 50 | b1–b2 = Lucky Stars |
 | Eurojackpot | Europe | `data/ej.csv` | 994 | 2012-03-23 | 2026-10-13 | 5 of 50 | b1–b2 = Euro numbers |
-| Keno (FDJ) | France | `data/keno_fr.csv` | 361 | 2025-10-30 | 2026-10-21 | 20 of 70 | slot, multiplier, joker |
+| Keno (FDJ) | France | `data/keno_fr.csv` | 19,502 | 1993-09-16 | 2026-11-06 | 20 of 70 until Oct 2025, 16 of 56 since 2025-11-03 | slot, multiplier, joker |
 | Loto (FDJ) | France | `data/loto.csv` | 1,086 | 2019-11-06 | 2026-10-12 | 5 of 49 | b1 = Chance number |
 | KENO | Germany | `data/keno.csv` | 7,966 | 2004-02-02 | 2026-10-20 | 20 of 70 | plus5 = 5-digit Plus 5 number |
 | LOTTO 6aus49 | Germany | `data/lotto.csv` | 6,568 | 1955-10-09 | 2026-10-10 | 6 of 49 | b1 = Superzahl (0–9, where available); flag A/B = two draws on the same day |
@@ -52,12 +52,13 @@ Clean, ready-to-use CSV files with the winning numbers of **36 lotteries** from 
 - UTF-8, comma-separated, one header row, one row per draw (Lotto italiano: one row per draw and wheel).
 - `date` is ISO format `YYYY-MM-DD`; `weekday` is `mon` … `sun`.
 - Main numbers `n1 … nK` are sorted in ascending order (except Lotto italiano: draw order). Bonus numbers are in `b1`, `b2`.
+- Keno (FDJ): draws with 16 numbers (since 2025-11-03) leave `n17 … n20` empty.
 - 4D games: each prize number is a 4-digit string (leading zeros kept).
 
 ## Things to know before analysing
 
-- **Rules change.** Some games changed their number range over time (see the "Main numbers" column: for example UK Lotto went from 6/49 to 6/59 in October 2015, Powerball and Mega Millions changed several times). Split the data by period before testing frequencies.
-- **Draws are independent.** Every combination has exactly the same chance in every draw. Our own tests on these files (chi-squared, walk-forward backtests) find no exploitable pattern: hot, cold or "overdue" numbers do no better than chance. See for example [Patterns in chance](https://lottochaos.com/en/articles/patterns-in-chance/) and [Draw machines and ball sets](https://lottochaos.com/en/articles/draw-machines/).
+- **Rules change.** Some games changed their number range over time (see the "Main numbers" column: for example UK Lotto went from 6/49 to 6/59 in October 2015, Keno (FDJ) from 20 of 70 to 16 of 56 in November 2025, Powerball and Mega Millions changed several times). Split the data by period before testing frequencies.
+- **Draws are independent.** Every combination has exactly the same chance in every draw. Our own tests on these files (chi-squared, walk-forward backtests) find no exploitable pattern: hot, cold or "overdue" numbers do no better than chance. See for example [Patterns in chance](https://lottochaos.com/en/articles/patterns-in-chance/?utm_source=github) and [Draw machines and ball sets](https://lottochaos.com/en/articles/draw-machines/?utm_source=github).
 - Results are compiled from officially published sources. If you find an error, please open an issue.
 
 ## Ideas
